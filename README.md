@@ -232,8 +232,8 @@ docker run -id --name minimum-server -p 12220:22 -p 18080:80 -p 49190:49190 mini
 
 - PhpStorm -> Preferences -> Build, Execution, Deployment -> Deployment
 ![](http://133.242.185.114:18080/assets/deployment_connection.png)
-![](http://133.242.185.114:18080/assets/deployment_dialog.png)
   - 「+」ボタンクリック
+![](http://133.242.185.114:18080/assets/deployment_dialog.png)
   - 「Name」は適当に。例えば「Sakura-VPS Docker」
   - 「Connection」タブ
     - 「Type」は「SFTP」

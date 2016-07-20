@@ -17,6 +17,7 @@
   - 開発端末(Mac/Windows)にインストールされている必要があります
 - PhpStorm
   - PhpStormでしか試していませんが、おそらくNetBeans/Eclipseでも可能かと思います
+    - NetBeansでも動作確認できました。
 
 
 ## おおまかな流れ
@@ -153,7 +154,7 @@ sakura-vps                generic      Running   tcp://さくらVPSのIP:2376
 
 ### コンテナ作成
 
-適当にnginx/php/sshdが入ったコンテナを作成します。  
+適当にnginx/php/sshdが入ったコンテナを作成します。  
 
 #### Dockerファイルに必要なこと
 

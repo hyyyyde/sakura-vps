@@ -331,7 +331,6 @@ Puttyを利用すると楽です。
 
 - Run -> Edit Configurations...
 ![](http://133.242.185.114:18080/assets/menu_edit_configurations.png)
-
     - 「+」ボタンをクリック
     - 「PHP HTTP Request」を選択
     - 「Server」はサーバー設定したものを選択。例えば「Sakura-VPS Server」

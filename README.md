@@ -133,6 +133,7 @@ docker-machine --debug create -d generic --generic-ip-address さくらVPSのIP 
 
 実行すると、
 ```
+Daemon not responding yet: dial tcp さくらVPSのIP:2376: ConnectEx tcp: No connection could be made because the target machine actively refused it.
 ```
 と表示され、60後くらいにTimeoutします。  
 が、問題なくdocker-machine作成できていますので、無視してください。  
@@ -155,6 +156,11 @@ sakura-vps                generic      Running   tcp://さくらVPSのIP:2376
 ### コンテナ作成
 
 適当にnginx/php/sshdが入ったコンテナを作成します。  
+
+#### 参考コンテナ
+
+https://github.com/hyyyyde/docker
+
 
 #### Dockerファイルに必要なこと
 
@@ -184,9 +190,14 @@ RUN sed -ri 's/^PasswordAuthentication yes/PasswordAuthentication no/' /etc/ssh/
 RUN sed -ri 's/^#GatewayPorts no/GatewayPorts yes/' /etc/ssh/sshd_config
 ```
 
+```
+RUN sed -ri 's/^#GatewayPorts no/GatewayPorts yes/' /etc/ssh/sshd_config
+```
+はXdebugで必要なので、必ず記載すること。
+
+
 また、コンテナに含まれるphp.iniには以下を追記すること
 ```
-
 [xdebug]
 xdebug.remote_enable=1
 xdebug.remote_autostart=1

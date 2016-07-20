@@ -296,6 +296,7 @@ docker run -id --name minimum-server -p 12220:22 -p 18080:80 -p 49190:49190 mini
   - 「Name」は適当に。例えば「Sakura-VPS Server」
   - 「Host」はさくらVPSのIP
   - 「Port」は「80」
+    - Windowsはなぜか「18080」
   - 「Debugger」は「Xdebug」
   - 「Absolute path on server」はコンテナないのプロジェクト設置ディレクトリを指定
     - ここを設定しないとブレークポイントでブレークしても、ソースで表示されない
@@ -306,9 +307,37 @@ docker run -id --name minimum-server -p 12220:22 -p 18080:80 -p 49190:49190 mini
 
 開発端末からリモートフォワードします。
 
+#### Mac
 ```
 ssh -vvv -f -N -R 49190:192.168.0.5:49190 -p 12220 -i 秘密鍵のパス sockets@さくらVPSのIP
 ```
 
 - 192.168.0.5 はMacのリモートログインIPアドレス
+
+
+#### Windows
+
+Puttyを利用すると楽です。
+
+![](http://133.242.185.114:18080/assets/putty.png)
+
 - WindowsはipconfigしたIPv4アドレス
+- Puttyのターミナルが起動中はフォワードされます
+
+
+## デバッグ方法
+
+### アクセスしたいURLを設定
+
+- Run -> Edit Configurations...
+![](http://133.242.185.114:18080/assets/menu_edit_configurations.png)
+
+    - 「+」ボタンをクリック
+    - 「PHP HTTP Request」を選択
+    - 「Server」はサーバー設定したものを選択。例えば「Sakura-VPS Server」
+    - 「URL」はプロジェクトURLを指定。POST/GETしたいURLを相対パスで指定してください
+    - 「Apply」をクリック
+
+### デバッグ実行
+
+デバッグ実行ボタンを押すと、ブレークします

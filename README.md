@@ -243,9 +243,9 @@ docker run -id --name minimum-server -p 12220:22 -p 18080:80 -p 49190:49190 mini
 #### ソースコードのDeploy設定
 
 - PhpStorm -> Preferences -> Build, Execution, Deployment -> Deployment
-![](http://133.242.185.114:18080/assets/deployment_connection.png)
+![](https://raw.github.com/hyyyyde/sakura-vps/master/assets/deployment_connection.png)
   - 「+」ボタンクリック
-![](http://133.242.185.114:18080/assets/deployment_dialog.png)
+![](https://raw.github.com/hyyyyde/sakura-vps/master/assets/deployment_dialog.png)
   - 「Name」は適当に。例えば「Sakura-VPS Docker」
   - 「Connection」タブ
     - 「Type」は「SFTP」
@@ -259,7 +259,7 @@ docker run -id --name minimum-server -p 12220:22 -p 18080:80 -p 49190:49190 mini
     - 「Private key file」は秘密鍵のパス
     - 「Web server root URL」は「http://さくらのIPアドレス:18080」
     - 設定し終えたら「Test SFTP connection...」してみる
-![](http://133.242.185.114:18080/assets/deployment_mapings.png)
+![](https://raw.github.com/hyyyyde/sakura-vps/master/assets/deployment_mapings.png)
   - 「Mappings」タブ
     - 「Local path」は開発端末のプロジェクトディレクトリ
     - 「Deployment path on 'Sakura-VPS Docker'」は「/」
@@ -267,7 +267,7 @@ docker run -id --name minimum-server -p 12220:22 -p 18080:80 -p 49190:49190 mini
   - 「Apply」をクリック
 
 - PhpStorm -> Preferences -> Build, Execution, Deployment -> Deployment -> Option
-![](http://133.242.185.114:18080/assets/deployment_options.png)
+![](https://raw.github.com/hyyyyde/sakura-vps/master/assets/deployment_options.png)
   - 「Upload changed files automatically to the default server」は「Always」
   - 「Upload external changes」にチェックをする
 
@@ -275,11 +275,11 @@ docker run -id --name minimum-server -p 12220:22 -p 18080:80 -p 49190:49190 mini
 #### リモートサーバーのPHP指定
 
 - PhpStorm -> Preferences -> Languages & Framework -> PHP
-![](http://133.242.185.114:18080/assets/php.png)
+![](https://raw.github.com/hyyyyde/sakura-vps/master/assets/php.png)
   - 「PHP language level」はコンテナにインストールしたPHPのバージョン
   - 「Interpreter」は「...」ボタンをクリック
     - 別ダイアログが開くので、「+」ボタンをクリック
-![](http://133.242.185.114:18080/assets/php_interpreter_dialog.png)
+![](https://raw.github.com/hyyyyde/sakura-vps/master/assets/php_interpreter_dialog.png)
       - 「Name」は適当に。例えば「Sakura-VPS PHP5.6」
       - 「Deployment configuration」を選択
       - 「Deployment configuration」は先ほど設定した「Sakura-VPS Docker」を選択
@@ -293,17 +293,17 @@ docker run -id --name minimum-server -p 12220:22 -p 18080:80 -p 49190:49190 mini
 #### Xdebug設定
 
 - PhpStorm -> Preferences -> Languages & Framework -> PHP -> Debug
-![](http://133.242.185.114:18080/assets/php_debug.png)
+![](https://raw.github.com/hyyyyde/sakura-vps/master/assets/php_debug.png)
   - 「Debug port」は「49190」
 
 - Run -> Start Listening for PHP Debug Connection を選択
-![](https://github.com/hyyyyde/sakura-vps/master/assets/run_menu.png)
+![](https://raw.github.com/hyyyyde/sakura-vps/master/assets/run_menu.png)
 
 
 #### サーバー設定
 
 - PhpStorm -> Preferences -> Languages & Framework -> PHP -> Servers
-![](http://133.242.185.114:18080/assets/php_servers.png)
+![](https://raw.github.com/hyyyyde/sakura-vps/master/assets/php_servers.png)
   - 「Name」は適当に。例えば「Sakura-VPS Server」
   - 「Host」はさくらVPSのIP
   - 「Port」は「80」
@@ -330,7 +330,7 @@ ssh -vvv -f -N -R 49190:192.168.0.5:49190 -p 12220 -i 秘密鍵のパス sockets
 
 Puttyを利用すると楽です。
 
-![](http://133.242.185.114:18080/assets/putty.png)
+![](https://raw.github.com/hyyyyde/sakura-vps/master/assets/putty.png)
 
 - WindowsはipconfigしたIPv4アドレス
 - Puttyのターミナルが起動中はフォワードされます
@@ -341,7 +341,7 @@ Puttyを利用すると楽です。
 ### アクセスしたいURLを設定
 
 - Run -> Edit Configurations...
-![](http://133.242.185.114:18080/assets/menu_edit_configurations.png)
+![](https://raw.github.com/hyyyyde/sakura-vps/master/assets/menu_edit_configurations.png)
     - 「+」ボタンをクリック
     - 「PHP HTTP Request」を選択
     - 「Server」はサーバー設定したものを選択。例えば「Sakura-VPS Server」

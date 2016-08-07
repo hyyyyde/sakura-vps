@@ -297,7 +297,7 @@ docker run -id --name minimum-server -p 12220:22 -p 18080:80 -p 49190:49190 mini
   - 「Debug port」は「49190」
 
 - Run -> Start Listening for PHP Debug Connection を選択
-![](http://133.242.185.114:18080/assets/run_menu.png)
+![](https://github.com/hyyyyde/sakura-vps/master/assets/run_menu.png)
 
 
 #### サーバー設定

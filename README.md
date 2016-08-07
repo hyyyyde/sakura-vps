@@ -340,8 +340,10 @@ Puttyを利用すると楽です。
 
 ### アクセスしたいURLを設定
 
-- Run -> Edit Configurations...
+
 ![](https://raw.github.com/hyyyyde/sakura-vps/master/assets/menu_edit_configurations.png)
+
+- Run -> Edit Configurations...
     - 「+」ボタンをクリック
     - 「PHP HTTP Request」を選択
     - 「Server」はサーバー設定したものを選択。例えば「Sakura-VPS Server」
